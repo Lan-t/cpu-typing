@@ -130,7 +130,11 @@ TypedefStruct(XCR0, {
     // 64
 })
 
-typedef uint16_t SegmentRegister;
+TypedefStruct(SegmentRegister, {
+    unsigned RPL: 2;
+    unsigned table_indicator: 1;
+    unsigned index: 13;
+})
 
 TypedefStruct2SameContents(GDTR, IDTR, {
     uint16_t limit;

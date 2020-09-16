@@ -25,6 +25,7 @@ void test_register_size() {
     assertSize(CR4, 8);
     assertSize(CR8, 8);
 
+    assertSize(SegmentRegister, 2);
     assertSize(GDTR, 10);
     assertSize(IDTR, 10);
 
