@@ -7,6 +7,7 @@
 
 #include <stdint.h>
 #include "../../../_macro.h"
+#include "register.h"
 
 #pragma pack(1)
 
@@ -87,7 +88,7 @@ TypedefStruct(SystemSegmentDescriptor, {
 TypedefStruct(CallGateDescriptor, {
     // 0
     uint16_t offset_15_00;
-    uint16_t segment_selector;
+    SegmentRegister segment_selector;
     // 32
     unsigned param_count: 5;
     unsigned _0_fill_: 3;
@@ -112,7 +113,7 @@ TypedefStruct(CallGateDescriptor, {
 TypedefStruct(IDTGateDescriptor, {
     // 0
     uint16_t offset_15_00;
-    uint16_t segment_selector;
+    SegmentRegister segment_selector;
     // 32
     unsigned ist : 3;
     unsigned _0_fill_ : 5;
