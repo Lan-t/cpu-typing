@@ -11,6 +11,6 @@ add_library(cpu_typing
         include/x86_64/IA32e-64/segment.h
         include/x86_64/IA32e-64/register.h
         include/x64_IA32e64.h
-        include/x86_64/IA32e-64/paging.h)
+        include/x86_64/IA32e-64/paging.h include/x86_64/IA32e-64/interrupt_frame.h)
 
 add_executable(test_exec test.c)
