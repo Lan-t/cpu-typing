@@ -8,6 +8,8 @@
 #include <stdint.h>
 #include "../../../_macro.h"
 
+#pragma pack(1)
+
 TypedefStruct(TaskStateSegment, {
     uint32_t _reserved_0;
     uint32_t rsp_0_low;
@@ -37,5 +39,7 @@ TypedefStruct(TaskStateSegment, {
     uint16_t _reserved_5;
     uint16_t io_map_base;
 })
+
+#pragma pack()
 
 #endif //CPU_TYPING_X86_64_IA32E_64_SEGMENT_H

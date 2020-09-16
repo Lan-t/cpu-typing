@@ -10,6 +10,7 @@ add_library(cpu_typing
         _macro.h
         include/x86_64/IA32e-64/segment.h
         include/x86_64/IA32e-64/register.h
-        include/x64_IA32e64.h)
+        include/x64_IA32e64.h
+        include/x86_64/IA32e-64/paging.h)
 
 add_executable(test_exec test.c)

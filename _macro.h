@@ -9,5 +9,9 @@
 #define TypedefStruct2SameContents(name1, name2, contents)\
 typedef struct name1 contents name1;\
 typedef struct name2 contents name2;
+#define TypedefStruct3SameContents(name1, name2, name3, contents)\
+typedef struct name1 contents name1;\
+typedef struct name2 contents name2;\
+typedef struct name3 contents name3;
 
 #endif // CPU_TYPING_X86_64_IA32E_64__MACRO_H
