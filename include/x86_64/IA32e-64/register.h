@@ -146,6 +146,8 @@ typedef int16_t LDTR;
 
 // MSR
 
+#define IA32_EFER_ADDR 0xc0000080
+
 TypedefStruct(IA32_EFER, {
     unsigned syscall_enable: 1;
     unsigned _reserved_0: 7;
@@ -155,6 +157,19 @@ TypedefStruct(IA32_EFER, {
     unsigned exec_disable_bit_enable: 1;
     uint64_t _reserved_2: 52;
 })
+
+#define IA32_STAR_ADDR 0xc0000081
+typedef uint64_t IA32_STAR;
+
+#define IA32_LSTAR_ADDR 0xc0000082
+typedef uint64_t IA32_LSTAR;
+
+#define IA32_CSTAR_ADDR 0xc0000083
+typedef uint64_t IA32_CSTAR;
+
+#define IA32_FMASK_ADDR 0xc0000084
+typedef uint64_t IA32_FMASK;
+
 
 #pragma pack()
 
